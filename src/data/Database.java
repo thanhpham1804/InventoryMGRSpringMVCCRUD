@@ -60,6 +60,7 @@ public class Database {
                     p.unitcost = rs.getDouble("unitCost");
                     p.discount = rs.getDouble("DiscountRate");
                     p.quantity = rs.getInt("StockQty");
+                    p.locationID = rs.getInt("LocationCode");
                     products.add(p);
                 }
 		return products;

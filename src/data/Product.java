@@ -61,6 +61,7 @@ public class Product {
 		return id;
 	}
 
+
 	public void setId(String id) {
 		this.id = id;
 	}
@@ -129,7 +130,16 @@ public class Product {
 		this.quantity = quantity;
 	}
 
-    
+	int locationID;
+
+	public int getLocationID() {
+		return locationID;
+	}
+
+	public void setLocationID(int locationID) {
+		this.locationID = locationID;
+	}
+
 	
 	
 	

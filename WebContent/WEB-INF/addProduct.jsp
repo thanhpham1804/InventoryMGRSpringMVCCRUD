@@ -102,6 +102,9 @@
 							<form:input type="text" path="body"  class="addField" placeholder="Body" />
 							<form:errors path="body" />
 							<br>
+							<form:input type="text" path="locationID"  class="addField" placeholder="LocationID" />
+							<form:errors path="locationID" />
+							<br>
 							<form:input type="text" path="msrp"  class="addField" placeholder="MSRP" />
 							<form:errors path="msrp" />
 							<br> 

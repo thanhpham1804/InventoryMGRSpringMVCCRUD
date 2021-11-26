@@ -81,7 +81,7 @@
 						<select name="ID">
 							<c:forEach var="item" items="${inventory}">
 
-								<option value="${item.ID}">Product ID: ${item.ID}</option>
+								<option value="${item.id}">Product ID: ${item.id}</option>
 
 							</c:forEach>
 						</select> <br> <button type="submit" value="view product details" class="btn btn-primary">view</button>
@@ -91,7 +91,7 @@
 				</div>
 			</div>
 
-			<c:if test="${product.ID > 0}">
+			<c:if test="${product.id > 0}">
 				<table>
 					<tr>
 						<th class="spacing">Product ID</th>
@@ -108,18 +108,21 @@
 						<th class="spacing">Status</th>
 					</tr>
 					<tr>
-						<td class="spacing">${product.ID}</td>
-						<td class="spacing">${product.brand}</td>
-						<td class="spacing">${product.type}</td>
-						<td class="spacing">${product.size}</td>
-						<td class="spacing">${product.batch}</td>
-						<td class="spacing">${product.qtyCarton}</td>
-						<td class="spacing">${product.qtyPallet}</td>
+						<td class="spacing">${product.id}</td>
+						<td class="spacing">${product.name}</td>
+						<td class="spacing">${product.modelType}</td>
+						<td class="spacing">${product.manufacturer}</td>
+						<td class="spacing">${product.year}</td>
+						<td class="spacing">${product.body}</td>
+						<td class="spacing">${product.location}</td>
+						<td class="spacing">${product.msrp}</td>
+						<td class="spacing">${product.unitcost}</td>
+						<td class="spacing">${product.discount}</td>
+						<td class="spacing">${product.quantity}</td>
+						<td class="spacing">${product.getStatus()}</td>
+						
 					</tr>
 				</table>
-			<div class="image">
-				<img src="images/${product.image}" alt="product image">
-			</div>
 			</c:if>
 		</div>
 

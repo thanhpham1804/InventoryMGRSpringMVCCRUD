@@ -82,33 +82,44 @@
 					<div class="editForm">
 
 						<form:form action="EditProductData.do" method="POST" modelAttribute="product">
-							<select name="ID">
+							<select name="id">
 								<c:forEach var="item" items="${inventory}">
 									<c:choose>
-										<c:when test="${product != null && product.ID == item.ID}">
-											<option value="${item.ID}" selected>Product ID:
-												${item.ID}</option>
+										<c:when test="${product != null && product.id == item.id}">
+											<option value="${item.id}" selected>Product ID:
+												${item.id}</option>
 										</c:when>
 										<c:otherwise>
-											<option value="${item.ID}">Product ID: ${item.ID}</option>
+											<option value="${item.id}">Product ID: ${item.id}</option>
 										</c:otherwise>
 									</c:choose>
 								</c:forEach>
 							</select> 
 							<br>
 
-							<form:input type="text" path="brand" class="editField" value="${product.brand}" placeholder="Brand" />
-							<form:errors path="brand" /><br> 
-							<form:input type="text" path="type" class="editField" value="${product.type}" placeholder="Lemon/Sparkling/Still" />
-							<form:errors path="type" /><br> 
-							<form:input type="text" path="size" class="editField" value="${product.size}" placeholder="Bottle Size in cl" />
-							<form:errors path="size" /><br> 
-							<form:input type="text" path="batch" class="editField" value="${product.batch}" placeholder="Batch Date (YYYY-Mmm)" />
-							<form:errors path="batch" /><br> 
-							<form:input type="text" path="qtyCarton" class="editField" value="${product.qtyCarton}" placeholder="Qty Bottles / Carton" />
-							<form:errors path="qtyCarton" /><br> 
-							<form:input type="text" path="qtyPallet" class="editField" value="${product.qtyPallet}" placeholder="Qty Bottles / Pallet" />
-							<form:errors path="qtyPallet" /><br> 
+					
+							<form:input type="text" path="name" class="editField" value="${product.name}" placeholder="Name" />
+							<form:errors path="name" /><br> 
+							<form:input type="text" path="modelType" class="editField" value="${product.modelType}" placeholder="Model" />
+							<form:errors path="modelType" /><br> 
+							<form:input type="text" path="manufacturer" class="editField" value="${product.manufacturer}" placeholder="Manufacturer" />
+							<form:errors path="manufacturer" /><br> 
+							<form:input type="text" path="year" class="editField" value="${product.year}" placeholder="Year" />
+							<form:errors path="year" /><br> 
+							<form:input type="text" path="body" class="editField" value="${product.body}" placeholder="Body" />
+							<form:errors path="body" /><br> 
+							<form:input type="text" path="locationID" class="editField" value="${product.locationID}" placeholder="Location" />
+							<form:errors path="locationID" /><br> 
+							<form:input type="text" path="msrp" class="editField" value="${product.msrp}" placeholder="MSRP" />
+							<form:errors path="msrp" /><br> 
+							<form:input type="text" path="unitcost" class="editField" value="${product.unitcost}" placeholder="Unit Cost" />
+							<form:errors path="unitcost" /><br> 
+							<form:input type="text" path="discount" class="editField" value="${product.discount}" placeholder="Discount" />
+							<form:errors path="discount" /><br> 
+							<form:input type="text" path="quantity" class="editField" value="${product.quantity}" placeholder="Quantity" />
+							<form:errors path="quantity" /><br> 
+							<form:input type="text" path="status" class="editField" value="${product.status}" placeholder="Status" />
+							<form:errors path="status" /><br> 
 							<button type="submit" value="submit" class="btn btn-primary">submit</button>
 
 						</form:form>
