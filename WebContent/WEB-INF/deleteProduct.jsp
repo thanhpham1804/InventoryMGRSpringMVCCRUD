@@ -83,7 +83,7 @@
 							<select name="ID">
 								<c:forEach var="item" items="${inventory}">
 
-									<option value="${item.ID}">Product ID: ${item.ID}</option>
+									<option value="${item.id}">Product ID: ${item.id}</option>
 
 								</c:forEach>
 							</select> <br> <button type="submit" value="submit" class="btn btn-danger">delete</button>

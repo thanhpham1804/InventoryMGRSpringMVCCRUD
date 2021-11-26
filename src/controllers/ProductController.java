@@ -27,18 +27,18 @@ public class ProductController {
 
 	@Autowired
 	private ProductService productService;
-	private ProductDAO mockDAO;
+	//private ProductDAO mockDAO;
 
+	/*
 	public void setDao(ProductDAO dao) {
 		this.mockDAO = dao;
-	}
+	}*/
 
 	@RequestMapping(path = "GetInventory.do", method = RequestMethod.GET)
 	public ModelAndView getInventory() {
 		ModelAndView mv = new ModelAndView();
 		mv.setViewName("viewInventory");
 		mv.addObject("inventory", productService.getInventory());
-//		mv.addObject("inventory", mockDAO.getInventory());
 		return mv;
 	}
 

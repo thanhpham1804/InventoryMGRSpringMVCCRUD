@@ -89,38 +89,49 @@
 				<thead class="thead-inverse">
 					<tr>
 						<th>Product ID</th>
-						<th>Brand</th>
-						<th>Type</th>
-						<th>Size</th>
-						<th>Batch Date</th>
-						<th>Qty pr Carton</th>
-						<th>Qty pr Pallet</th>
+						<th>Product Name</th>
+						<th>Model</th>
+						<th>Manufacturer</th>
+						<th>Year</th>
+						<th>Body</th>
+						<th>Location</th>
+						<th>MSRP</th>
+						<th>Unit Cost</th>
+						<th>Discount</th>
+						<th>Quantity</th>
+						<th>Status</th>
 						<th colspan="3">Actions</th>
 					</tr>
 				</thead>
 				<tbody>
 					<c:forEach var="item" items="${inventory}">
 						<tr>
-							<td class="spacing">${item.ID}</td>
-							<td class="spacing">${item.brand}</td>
-							<td class="spacing">${item.type}</td>
-							<td class="spacing">${item.size}</td>
-							<td class="spacing">${item.batch}</td>
-							<td class="spacing">${item.qtyCarton}</td>
-							<td class="spacing">${item.qtyPallet}</td>
+							<td class="spacing">${item.id}</td>
+							<td class="spacing">${item.name}</td>
+							<td class="spacing">${item.modelType}</td>
+							<td class="spacing">${item.manufacturer}</td>
+							<td class="spacing">${item.year}</td>
+							<td class="spacing">${item.body}</td>
+							<td class="spacing">${item.location}</td>
+							<td class="spacing">${item.msrp}</td>
+							<td class="spacing">${item.unitcost}</td>
+							<td class="spacing">${item.discount}</td>
+							<td class="spacing">${item.quantity}</td>
+							<td class="spacing">${item.getStatus()}</td>
+							
 							<td class="viewButton"><form
-									action="ViewProduct.do?ID=${item.ID}" method="GET">
-									<button type="submit" name="ID" value="${item.ID}"
+									action="ViewProduct.do?ID=${item.id}" method="GET">
+									<button type="submit" name="ID" value="${item.id}"
 										class="btn btn-xs btn-primary">view</button>
 								</form></td>
 							<td class="editButton"><form
-									action="EditProduct.do?ID=${item.ID}" method="GET">
-									<button type="submit" name="ID" value="${item.ID}"
+									action="EditProduct.do?ID=${item.id}" method="GET">
+									<button type="submit" name="ID" value="${item.id}"
 										class="btn btn-xs btn-warning">edit</button>
 								</form></td>
 							<td class="deleteButton"><form action="DeleteProductData.do"
 									method="POST">
-									<button type="submit" name="ID" value="${item.ID}"
+									<button type="submit" name="ID" value="${item.id}"
 										class="btn btn-xs btn-danger">delete</button>
 								</form></td>
 						</tr>

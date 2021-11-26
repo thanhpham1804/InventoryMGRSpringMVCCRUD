@@ -84,23 +84,36 @@
 						<form:form action="AddProductData.do" method="POST" modelAttribute="product">
 
 							<br> 
-							<form:input type="text" path="brand" class="addField" placeholder="Enter Brand Name" />
-							  <form:errors path="brand" />
+							<form:input type="text" path="id" class="addField" placeholder="Enter ID" />
+							  <form:errors path="id" />
 							<br> 
-							<form:input type="text" path="type" class="addField" placeholder="Still/Sparkling/Lemon" />
-							<form:errors path="type" />
+							<form:input type="text" path="name" class="addField" placeholder="Product Name" />
+							<form:errors path="name" />
 							<br> 
-							<form:input type="text" path="size" class="addField" placeholder="Bottle Size" />
-							<form:errors path="size" />
+							<form:input type="text" path="modelType" class="addField" placeholder="Model" />
+							<form:errors path="modelType" />
 							<br> 
-							<form:input type="text" path="batch" class="addField" placeholder="Batch Date (YYYY-Mmm)" />
-							<form:errors path="batch" />
+							<form:input type="text" path="manufacturer" class="addField" placeholder="Manufacturer" />
+							<form:errors path="manufacturer" />
 							<br>
-							<form:input type="text" path="qtyCarton" class="addField" placeholder="Qty Bottles / Carton" />
-							<form:errors path="qtyCarton" />
+							<form:input type="text" path="year" class="addField" placeholder="year" />
+							<form:errors path="year" />
 							<br> 
-							<form:input type="text" path="qtyPallet"  class="addField" placeholder="Qty Bottles / Pallet" />
-							<form:errors path="qtyPallet" />
+							<form:input type="text" path="body"  class="addField" placeholder="Body" />
+							<form:errors path="body" />
+							<br>
+							<form:input type="text" path="msrp"  class="addField" placeholder="MSRP" />
+							<form:errors path="msrp" />
+							<br> 
+							
+							<form:input type="text" path="unitcost"  class="addField" placeholder="Unit Cost" />
+							<form:errors path="unitcost" />
+							<br>
+							<form:input type="text" path="discount"  class="addField" placeholder="Discount" />
+							<form:errors path="discount" />
+							<br>
+							<form:input type="text" path="quantity"  class="addField" placeholder="Quantity" />
+							<form:errors path="quantity" />
 							<br>
 							<button type="submit" value="submit" class="btn btn-primary">submit</button>
 

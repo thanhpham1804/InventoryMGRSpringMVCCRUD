@@ -12,9 +12,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.context.WebApplicationContext;
 
 public class ProductDAOImpl implements ProductDAO {
-	private static final String FILE_NAME = "/WEB-INF/inventory.csv";
-	private List<Product> inventory = new ArrayList<>();
 
+	Database db;
 	@Autowired
 	private WebApplicationContext wac;
 
@@ -25,32 +24,14 @@ public class ProductDAOImpl implements ProductDAO {
 
 	@PostConstruct
 	public void init() {
-		// Retrieve an input stream from the servlet context
-		// rather than directly from the file system
-		try (InputStream is = wac.getServletContext().getResourceAsStream(FILE_NAME);
-				BufferedReader buf = new BufferedReader(new InputStreamReader(is));) {
-			String line = buf.readLine();
-			while ((line = buf.readLine()) != null) {
-				String[] tokens = line.split(",");
-				int id = Integer.parseInt(tokens[0]);
-				String brand = tokens[1];
-				String type = tokens[2];
-				String size = tokens[3];
-				String batch = tokens[4];
-				String qtyCarton = tokens[5];
-				String qtyPallet = tokens[6];
-				String image = tokens[7];
-				inventory.add(new Product(id, brand, type, size, batch, qtyCarton, qtyPallet, image));
-			}
-		} catch (Exception e) {
-			System.err.println(e);
-		}
+		db = new Database();
+
 	}
 
 	@Override
 	public List<Product> getInventory() {
-		List<Product> userInv = new ArrayList<>(inventory);
-		return userInv;
+		
+		return db.getAll();
 	}
 
 	@Override
@@ -67,6 +48,7 @@ public class ProductDAOImpl implements ProductDAO {
 
 	@Override
 	public void addProduct(Product newProd) {
+		/*
 		Product p = new Product();
 		p.setID(inventory.get(inventory.size()-1).getID()+1);
 		p.setBrand(newProd.getBrand());
@@ -76,6 +58,9 @@ public class ProductDAOImpl implements ProductDAO {
 		p.setQtyCarton(newProd.getQtyCarton());
 		p.setQtyPallet(newProd.getQtyPallet());
 		inventory.add(p);
+		*/
+		newProd.setLocation(db.getWarehouse(1));
+		db.addProduct(newProd);
 	}
 
 	@Override
@@ -100,7 +85,7 @@ public class ProductDAOImpl implements ProductDAO {
 
 	@Override
 	public void deleteProduct(Product prod) {
-		inventory.remove(prod);
+		db.removeProduct(prod);
 	}
 
 }

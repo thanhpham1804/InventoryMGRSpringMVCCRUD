@@ -1,109 +1,137 @@
 package data;
 
-import javax.validation.constraints.Min;
-import javax.validation.constraints.NotNull;
-import javax.validation.constraints.Pattern;
-import javax.validation.constraints.Size;
+
 
 public class Product {
-	private int ID;
-	@Size(min=1, message="Please enter a brand")
-	private String brand;
-	@Size(min=1, message="Please enter a flavor e.g., still/sparkling/lemon")
-	private String type;
-	@Pattern(regexp="\\d+", message="Size is in cl, atleast 1 digit")
-	private String size;
-	@Pattern(regexp="\\d{4}(-\\w{3})?", message="Must match YYYY-Mmm")
-	private String batch;
+	String id;
+	String name;
+	String modelType;
+	String manufacturer;
+	int year;
+	String body;
+	Warehouse location;
+	double msrp;
+	double unitcost;
+	double discount;
+	int quantity;
 	
-	private String qtyCarton;
-	private String qtyPallet;
-	private String image;
+	public Warehouse getLocation() {
+		return location;
+	}
+
+	public void setLocation(Warehouse location) {
+		this.location = location;
+	}
+
+	public double getDiscount() {
+		return discount;
+	}
+
+	public void setDiscount(double discount) {
+		this.discount = discount;
+	}
+
 	
-	public Product() {}
-
-	public int getID() {
-		return ID;
+	public String getStatus()
+	{
+		if(quantity == 0)
+		{
+			return "Out of Stock";
+		} else
+		{
+			return "In Stock";
+		}
 	}
 
-	public void setID(int iD) {
-		ID = iD;
-	}
 
-	public String getBrand() {
-		return brand;
-	}
-
-	public void setBrand(String brand) {
-		this.brand = brand;
-	}
-
-	public String getType() {
-		return type;
-	}
-
-	public void setType(String type) {
-		this.type = type;
-	}
-
-	public String getSize() {
-		return size;
-	}
-
-	public void setSize(String size) {
-		this.size = size;
-	}
-
-	public String getBatch() {
-		return batch;
-	}
-
-	public void setBatch(String batch) {
-		this.batch = batch;
-	}
-
-	public String getQtyCarton() {
-		return qtyCarton;
-	}
-
-	public void setQtyCarton(String qtyCarton) {
-		this.qtyCarton = qtyCarton;
-	}
-
-	public String getQtyPallet() {
-		return qtyPallet;
-	}
-
-	public void setQtyPallet(String qtyPallet) {
-		this.qtyPallet = qtyPallet;
-	}
-
-	public String getImage() {
-		return image;
-	}
-
-	public void setImage(String image) {
-		this.image = image;
-	}
-
-	public Product(int iD, String brand, String type, String size, String batch, String qtyCarton, String qtyPallet, String image) {
-		super();
-		ID = iD;
-		this.brand = brand;
-		this.type = type;
-		this.size = size;
-		this.batch = batch;
-		this.qtyCarton = qtyCarton;
-		this.qtyPallet = qtyPallet;
-		this.image = image;
-	}
 
 	@Override
 	public String toString() {
-		StringBuilder builder = new StringBuilder();
-		builder.append("Product ID=").append(ID).append(", Brand=").append(brand).append(", Flavor=").append(type)
-				.append(", Size (cl)=").append(size).append(", Batch=").append(batch).append(", Qty pr Carton=")
-				.append(qtyCarton).append(", Qty pr Pallet=").append(qtyPallet);
-		return builder.toString();
+		//return "Product [id=" + id + ", name=" + name + ", modelType=" + modelType + ", manufacturer=" + manufacturer
+			//	+ ", year=" + year + ", body=" + body + ", location=" + location + ", msrp=" + msrp + ", unitcost="
+				//+ unitcost + ", discount=" + discount + ", quantity=" + quantity + ", getStatus()=" + getStatus() + "]";
+		
+
+		
+        return id +"  "+name+"  "+modelType+"  "+manufacturer+"  "+year+"  "+body+"  "+location+"  "+msrp+"  "+unitcost+"  "+discount+"  "+quantity+"  "+getStatus();
+		
 	}
+
+	public String getId() {
+		return id;
+	}
+
+	public void setId(String id) {
+		this.id = id;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public String getModelType() {
+		return modelType;
+	}
+
+	public void setModelType(String modelType) {
+		this.modelType = modelType;
+	}
+
+	public String getManufacturer() {
+		return manufacturer;
+	}
+
+	public void setManufacturer(String manufacturer) {
+		this.manufacturer = manufacturer;
+	}
+
+	public int getYear() {
+		return year;
+	}
+
+	public void setYear(int year) {
+		this.year = year;
+	}
+
+	public String getBody() {
+		return body;
+	}
+
+	public void setBody(String body) {
+		this.body = body;
+	}
+
+	public double getMsrp() {
+		return msrp;
+	}
+
+	public void setMsrp(double msrp) {
+		this.msrp = msrp;
+	}
+
+	public double getUnitcost() {
+		return unitcost;
+	}
+
+	public void setUnitcost(double unitcost) {
+		this.unitcost = unitcost;
+	}
+
+	public int getQuantity() {
+		return quantity;
+	}
+
+	public void setQuantity(int quantity) {
+		this.quantity = quantity;
+	}
+
+    
+	
+	
+	
+
 }

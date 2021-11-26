@@ -95,12 +95,17 @@
 				<table>
 					<tr>
 						<th class="spacing">Product ID</th>
-						<th class="spacing">Brand</th>
-						<th class="spacing">Type</th>
-						<th class="spacing">Size</th>
-						<th class="spacing">Batch Date</th>
-						<th class="spacing">Qty pr Carton</th>
-						<th class="spacing">Qty pr Pallet</th>
+						<th class="spacing">Product Name</th>
+						<th class="spacing">Model</th>
+						<th class="spacing">Manufacturer</th>
+						<th class="spacing">Year</th>
+						<th class="spacing">Body</th>
+						<th class="spacing">Location</th>
+						<th class="spacing">MSRP</th>
+						<th class="spacing">Unit Cost</th>
+						<th class="spacing">Discount</th>
+						<th class="spacing">Quantity</th>
+						<th class="spacing">Status</th>
 					</tr>
 					<tr>
 						<td class="spacing">${product.ID}</td>
