@@ -129,7 +129,7 @@ public class Database {
 	}
 	//method to show products by bodyType
         public ArrayList<Product> searchbyBody(String body){
-            String sql = "SELECT * from products WHERE Body Style = '" + body + "'";
+            String sql = "SELECT * from products WHERE BodyStyle = '" + body + "'";
             //TODO make case insensitive?
             return getProductsByQuery(sql);
 

@@ -39,6 +39,13 @@ public class ProductDAOImpl implements ProductDAO {
 		return db.searchbypid("" + ID).get(0);
 	}
 
+
+
+	@Override
+	public List<Product> getproductbycompany(String name) 
+	{
+			return db.searchByManufacturer(name);
+	}
 	@Override
 	public void addProduct(Product newProd) {
 		newProd.setLocation(db.getWarehouse(newProd.locationID));
@@ -56,6 +63,30 @@ public class ProductDAOImpl implements ProductDAO {
 	@Override
 	public void deleteProduct(Product prod) {
 		db.removeProduct(prod);
+	}
+
+	@Override
+	public List<Product> getproductbyprice(int price) {
+		// TODO Auto-generated method stub
+		return db.listbyprice(0.00, Double.valueOf(price));
+	}
+
+	@Override
+	public List<Product> getproductbytype(String btype) {
+		// TODO Auto-generated method stub
+		return db.searchbyBody(btype);
+	}
+
+	@Override
+	public List<Product> getproductbymodelname(String Mname) {
+		// TODO Auto-generated method stub
+		return db.searchbypname(Mname);
+	}
+
+	@Override
+	public List<Product> getproductbyyear(int year) {
+		// TODO Auto-generated method stub
+		return db.listbyyear(year);
 	}
 
 }

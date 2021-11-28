@@ -90,7 +90,6 @@
 
 				</div>
 			</div>
-
 			<c:if test="${product.id > 0}">
 				<table>
 					<tr>

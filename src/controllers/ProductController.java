@@ -77,6 +77,7 @@ public class ProductController {
 		return mv;
 	}
 
+
 	@RequestMapping(path = "AddProductData.do", method = RequestMethod.POST)
 	public ModelAndView addByID(@Valid Product product, Errors errors) {
 		ModelAndView mv = new ModelAndView();
@@ -89,6 +90,54 @@ public class ProductController {
 			mv.setViewName("viewInventory");
 			return mv;
 		}
+	}
+	@RequestMapping(path = "SearchInventory.do", method = RequestMethod.GET)
+	public ModelAndView getInventorySearch() {
+		ModelAndView mv = new ModelAndView();
+		mv.setViewName("searchinventory");
+		//mv.addObject("inventory", productService.getInventory());
+		return mv;
+	}
+	
+	@RequestMapping(path = "SearchInventoryData.do", method = RequestMethod.GET)
+	public ModelAndView viewProduct1(@RequestParam("Company") String company) {
+		ModelAndView mv = new ModelAndView();
+
+		mv.addObject("product", productService.getproductbycompany(company));
+		mv.setViewName("viewsearchresults");
+		return mv;
+	}
+	@RequestMapping(path = "SearchInventoryDatabytype.do", method = RequestMethod.GET)
+	public ModelAndView viewProduct2(@RequestParam("Type") String type) {
+		ModelAndView mv = new ModelAndView();
+
+		mv.addObject("product", productService.getproductbytype(type));
+		mv.setViewName("viewsearchresults");
+		return mv;
+	}
+	@RequestMapping(path = "SearchInventoryDatabyprice.do", method = RequestMethod.GET)
+	public ModelAndView viewProduct3(@RequestParam("Price") int price) {
+		ModelAndView mv = new ModelAndView();
+
+		mv.addObject("product", productService.getproductbyprice(price));
+		mv.setViewName("viewsearchresults");
+		return mv;
+	}
+	@RequestMapping(path = "SearchInventoryDatabymodelname.do", method = RequestMethod.GET)
+	public ModelAndView viewProduct4(@RequestParam("Mname") String Mname) {
+		ModelAndView mv = new ModelAndView();
+
+		mv.addObject("product", productService.getproductbymodelname(Mname));
+		mv.setViewName("viewsearchresults");
+		return mv;
+	}
+	@RequestMapping(path = "SearchInventoryDatabyyear.do", method = RequestMethod.GET)
+	public ModelAndView viewProduct5(@RequestParam("Year") int year) {
+		ModelAndView mv = new ModelAndView();
+
+		mv.addObject("product", productService.getproductbyyear(year));
+		mv.setViewName("viewsearchresults");
+		return mv;
 	}
 
 	@RequestMapping(path = "DeleteProduct.do", method = RequestMethod.GET)
@@ -128,5 +177,6 @@ public class ProductController {
 		mv.setViewName("viewProduct");
 		return mv;
 	}
+
 
 }
