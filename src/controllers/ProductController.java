@@ -33,7 +33,8 @@ public class ProductController {
 	public void setDao(ProductDAO dao) {
 		this.mockDAO = dao;
 	}*/
-
+	
+	
 	@RequestMapping(path = "GetInventory.do", method = RequestMethod.GET)
 	public ModelAndView getInventory() {
 		ModelAndView mv = new ModelAndView();
@@ -48,7 +49,6 @@ public class ProductController {
 		System.out.println(ID);
 		if (ID != null) {
 			Product p = productService.getProduct(ID);
-//			Product p = mockDAO.getProduct(ID);
 			mv.addObject("product", p);
 		}
 		mv.addObject("inventory", productService.getInventory());

@@ -30,6 +30,7 @@
 
 <body>
         <!--Begin Navbar-->
+        <!-- 
         <nav class="navbar navbar-default navbar-fixed-top">
             <div class="container-fluid">
                 <div class="navbar-header">
@@ -72,7 +73,9 @@
                 </div>
             </div>
         </nav>
-
+ 		-->
+ 		<jsp:include page="WEB-INF/header.jsp" />
+ 		
         <div>  
             <video width="320" height="240" autoplay>
                 <source src="https://www.youtube.com/watch?v=x7t_-ULoAZM" type="video/mp4">
@@ -104,42 +107,12 @@
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     </div>
 
-    <!--Username/password
-    <form action="index.html" method="post">
-        <div class="container">
-          <label for="uname"><b>Username</b></label>
-          <input type="text" placeholder="Enter Username" name="uname" required>
-      <br>
-          <label for="psw"><b>Password</b></label>
-          <input type="password" placeholder="Enter Password" name="psw" required>
-      
-          <button type="submit">Login</button>
-          <label>
-            <input type="checkbox" checked="checked" name="remember"> Remember me
-          </label>
-        </div>
-      
-            <div class="container" style="background-color:#2e3549">
-                <button type="button" class="cancelbtn">Cancel</button>
-                <span class="psw">Forgot <a href="#">password?</a></span>
-            </div>
-      </form>
-      -->
-   
 
 </body>
 
-<!-- Footer -->
-<footer>
-    <div class="footer">
-        <div class="container-fluid ">
-            <p>Coded and designed by <a style="color: #1e88cb" href="group9@gmail.com">Ids517Group9 </a>&copy;&nbsp;2021&ensp;|&ensp;
-                <a target="_blank" href="https://www.linkedin.com"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
-                <a target="_blank" href="https://500px.com"><i class="fa fa-500px" aria-hidden="true"></i></a>
-                <a target="_blank" href="https://github.com"><i class="fa fa-github" aria-hidden="true"></i></a>
-                <a target="_blank" href="https://www.instagram.com"><i class="fa fa-instagram" aria-hidden="true"></i></a></p>
-        </div>
-    </div>
-</footer>
+ 		<jsp:include page="WEB-INF/footer.jsp" />
+
+
+
 
 </html>
