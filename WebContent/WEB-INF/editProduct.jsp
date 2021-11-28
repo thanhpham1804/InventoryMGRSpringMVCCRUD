@@ -12,7 +12,7 @@
 <meta name="viewport"
 	content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta http-equiv="x-ua-compatible" content="ie=edge">
-<title>Inventory Management SpringMVC</title>
+<title>AutoShop Inventory Management System- Group 9 </title>
 
 <!-- Bootstrap CSS -->
 <link rel="stylesheet"
@@ -52,7 +52,7 @@
 						class="icon-bar"></span>
 				</button>
 				<h4>
-					<a href="index.html">Inventory Management SpringMVC</a>
+					<a href="index.html"><img src="icon.jpg" style="width:130px;height:50px;"></a>  
 				</h4>
 			</div>
 			<div class="collapse navbar-collapse" id="myNavbar">
@@ -66,8 +66,9 @@
 							<li><a class="bold" href="AddProduct.do">add product</a></li>
 							<li class="active"><a class="bold" href="EditProduct.do">edit
 									product</a></li>
+                                                        <li><a class="bold" href="DeleteProduct.do">delete product</a></li>
 						</ul></li>
-					<li><a class="bold" href="DeleteProduct.do">delete product</a></li>
+					<!--<li><a class="bold" href="DeleteProduct.do">delete product</a></li>-->
 					<li><a class="bold" href="contact.html">contact</a></li>
 				</ul>
 			</div>
@@ -98,7 +99,8 @@
 							<br>
 
 					
-							<form:input type="text" path="name" class="editField" value="${product.name}" placeholder="Name" />
+							
+                                                        <form:input type="text" path="name" class="editField" value="${product.name}" placeholder="Name" />
 							<form:errors path="name" /><br> 
 							<form:input type="text" path="modelType" class="editField" value="${product.modelType}" placeholder="Model" />
 							<form:errors path="modelType" /><br> 

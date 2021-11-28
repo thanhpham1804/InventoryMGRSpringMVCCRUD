@@ -50,7 +50,7 @@
 						class="icon-bar"></span>
 				</button>
 				<h4>
-					<a href="index.html">Inventory Management SpringMVC</a>
+					<a href="index.html"><img src="icon.jpg" style="width:130px;height:50px;"></a>  
 				</h4>
 			</div>
 			<div class="collapse navbar-collapse" id="myNavbar">
@@ -64,8 +64,10 @@
 									product</a></li>
 							<li><a class="bold" href="AddProduct.do">add product</a></li>
 							<li><a class="bold" href="EditProduct.do">edit product</a></li>
+              
+                                                        <!--<li><a class="bold" href="DeleteProduct.do">delete product</a></li>-->
 						</ul></li>
-					<li><a class="bold" href="DeleteProduct.do">delete product</a></li>
+					<<li><a class="bold" href="SearchInventoryData.do">Search Inventory</a></li>
 					<li><a class="bold" href="contact.html">contact</a></li>
 				</ul>
 			</div>

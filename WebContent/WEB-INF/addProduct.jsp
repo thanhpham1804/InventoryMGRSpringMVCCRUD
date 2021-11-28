@@ -50,7 +50,7 @@
 						class="icon-bar"></span>
 				</button>
 				<h4>
-					<a href="index.html">Inventory Management SpringMVC</a>
+					<a href="index.html"><img src="icon.jpg" style="width:130px;height:50px;"></a>
 				</h4>
 			</div>
 			<div class="collapse navbar-collapse" id="myNavbar">
@@ -64,8 +64,9 @@
 							<li class="active"><a class="bold" href="AddProduct.do">add
 									product</a></li>
 							<li><a class="bold" href="EditProduct.do">edit product</a></li>
+                                                        <!--<li><a class="bold" href="DeleteProduct.do">delete product</a></li>-->
 						</ul></li>
-					<li><a class="bold" href="DeleteProduct.do">delete product</a></li>
+					<!--<li><a class="bold" href="DeleteProduct.do">delete product</a></li>-->
 					<li><a class="bold" href="contact.html">contact</a></li>
 				</ul>
 			</div>
@@ -84,40 +85,50 @@
 						<form:form action="AddProductData.do" method="POST" modelAttribute="product">
 
 							<br> 
+                                                        <label for="id">Enter Product ID:</label><br>
 							<form:input type="text" path="id" class="addField" placeholder="Enter ID" />
 							  <form:errors path="id" />
-							<br> 
+                                                          <br><br>
+                                                           <label for="name">Enter Product Name:</label><br>
 							<form:input type="text" path="name" class="addField" placeholder="Product Name" />
 							<form:errors path="name" />
-							<br> 
+                                                        <br><br>
+                                                        <label for="modelType">Enter Product Model:</label><br>
 							<form:input type="text" path="modelType" class="addField" placeholder="Model" />
 							<form:errors path="modelType" />
-							<br> 
+							<br><br> 
+                                                        <label for="manufacturer">Enter Manufacturer:</label><br>
 							<form:input type="text" path="manufacturer" class="addField" placeholder="Manufacturer" />
 							<form:errors path="manufacturer" />
-							<br>
+                                                        <br><br>
+                                                        <label for="year">Enter Year of Manufacturing:</label><br>
 							<form:input type="text" path="year" class="addField" placeholder="year" />
 							<form:errors path="year" />
-							<br> 
+                                                        <br><br><!-- comment -->
+                                                        <label for="body">Enter Body type:</label><br>
 							<form:input type="text" path="body"  class="addField" placeholder="Body" />
 							<form:errors path="body" />
-							<br>
+                                                        <br><br>
+                                                        <label for="body">Enter Location ID:</label><br>
 							<form:input type="text" path="locationID"  class="addField" placeholder="LocationID" />
 							<form:errors path="locationID" />
-							<br>
+                                                        <br><br>
+                                                        <label for="msrp">Enter MSRP(in$):</label><br>
 							<form:input type="text" path="msrp"  class="addField" placeholder="MSRP" />
 							<form:errors path="msrp" />
-							<br> 
-							
+                                                        <br><br>
+							<label for="unitcost">Enter Unit Cost(in$):</label><br>
 							<form:input type="text" path="unitcost"  class="addField" placeholder="Unit Cost" />
 							<form:errors path="unitcost" />
-							<br>
+                                                        <br><br>
+                                                        <label for="discount">Enter Discount(in%):</label><br>
 							<form:input type="text" path="discount"  class="addField" placeholder="Discount" />
 							<form:errors path="discount" />
-							<br>
+                                                        <br><br>
+                                                        <label for="quantity">Enter Quantity:</label><br>
 							<form:input type="text" path="quantity"  class="addField" placeholder="Quantity" />
 							<form:errors path="quantity" />
-							<br>
+                                                        <br><br>
 							<button type="submit" value="submit" class="btn btn-primary">submit</button>
 
 						</form:form>

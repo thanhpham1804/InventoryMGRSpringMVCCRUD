@@ -6,13 +6,15 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Inventory Management SpringMVC</title>
+    <title>Group 9 Auto SHOP Inventory Management System</title>
+    
+    
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css?family=Raleway:500,900|Quicksand" rel="stylesheet">
-    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/index.css">
 
     <!-- jQuery -->
     <script type="text/javascript" src="http://code.jquery.com/jquery-1.10.0.min.js"></script>
@@ -25,10 +27,8 @@
     </script>
 </head>
 
+
 <body>
-    <div class="index-main">
-
-
         <!--Begin Navbar-->
         <nav class="navbar navbar-default navbar-fixed-top">
             <div class="container-fluid">
@@ -39,45 +39,60 @@
                 <span class="icon-bar"></span>
             </button>
                     <h4>
-                    <a href="index.html">Inventory Management SpringMVC</a>
+                    <a href="index.html"><img src="icon.jpg" style="width:130px;height:50px;"></a>  
                 </h4>
                 </div>
                 <div class="collapse navbar-collapse" id="myNavbar">
                     <ul class="nav navbar-nav navbar-right">
-                        <li><a class="bold" href="GetInventory.do">inventory list</a></li>
-                        <li><a class="bold" href="SearchInventory.do">Search Product</a></li>
-                        <li class="dropdown">
+                        </li>
+                        <input type="text" placeholder="Search" style="width: 120px; height: 50px;">
+                        <li><a class="bold" href="About us.html">About us</a></li>
+                        </li>
+                           
 
+                        <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">View/Edit <span class="caret"></span></a>
                             <ul class="dropdown-menu">
-                                <li><a class="bold" href="ViewProduct.do">view product</a></li>
-                                <li><a class="bold" href="AddProduct.do">add product</a></li>
-                                <li><a class="bold" href="EditProduct.do">edit product</a></li>
+                                <li><a class="bold" href="GetInventory.do">View All</a></li>
+                                <li><a class="bold" href="SearchInventory.do">Search Product</a></li>
+                                <li><a class="bold" href="AddProduct.do">Add Product </a></li>
+                                <li><a class="bold" href="EditProduct.do">View/Edit Product </a></li>
+                                
                             </ul>
-                        </li>
-                        <li><a class="bold" href="DeleteProduct.do">delete product</a></li>
-                        <li><a class="bold" href="contact.html">contact</a></li>
+                        <li>
+                            <li><a class="bold" href="Report.html">Report</a></li>
+                            <li><a class="bold" href="contact.html">Contact</a></li>
+                            <li><a class="bold" href="startpage.html">Login</a></li>
+                            
+                        
+                        
+                        
                         </li>
                     </ul>
                 </div>
             </div>
         </nav>
 
+        <div>  
+            <video width="320" height="240" autoplay>
+                <source src="https://www.youtube.com/watch?v=x7t_-ULoAZM" type="video/mp4">
+            Your browser does not support the video tag.
+            </video>
+        </div>
+
 
         <!--Begin Content-->
-
-        <div class="container well">
-
-            <h1>Welcome to the Inventory Management System</h1>
-            <h2>This system manages the inventory of Iskilde ApS, Skanderborg, Denmark</h2>
-
-            <div class="center">
-                <h4>Please select one of the options in the navigation bar at the top to begin.</h4>
+        <div class="container">
+            <div class="row">
+                <span class="text1">Welcome to the Inventory Management System</span>
+                <span class="text2">Please select one of the options in the navigation bar at the top to begin</span>
             </div>
         </div>
+        
         <div class="mainBackground">
+    
             <div class="mainBackgroundImage">
-                <img src="./images/mainBackground.jpg" alt="main background image of product family">
+                <img src="./images/background.jpg" alt="main background image of product family"style="width: 400px; height: 400px;">
             </div>
         </div>
 
@@ -89,17 +104,40 @@
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     </div>
 
+    <!--Username/password
+    <form action="index.html" method="post">
+        <div class="container">
+          <label for="uname"><b>Username</b></label>
+          <input type="text" placeholder="Enter Username" name="uname" required>
+      <br>
+          <label for="psw"><b>Password</b></label>
+          <input type="password" placeholder="Enter Password" name="psw" required>
+      
+          <button type="submit">Login</button>
+          <label>
+            <input type="checkbox" checked="checked" name="remember"> Remember me
+          </label>
+        </div>
+      
+            <div class="container" style="background-color:#2e3549">
+                <button type="button" class="cancelbtn">Cancel</button>
+                <span class="psw">Forgot <a href="#">password?</a></span>
+            </div>
+      </form>
+      -->
+   
+
 </body>
 
 <!-- Footer -->
 <footer>
     <div class="footer">
         <div class="container-fluid ">
-            <p>Coded and designed by <a style="color: #1e88cb" href="mailto:stephen.e.chiang@gmail.com">Stephen Chiang </a>&copy;&nbsp;2016&ensp;|&ensp;
-                <a target="_blank" href="https://www.linkedin.com/in/chiangs"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
-                <a target="_blank" href="https://500px.com/chiangs"><i class="fa fa-500px" aria-hidden="true"></i></a>
-                <a target="_blank" href="https://github.com/chiangs"><i class="fa fa-github" aria-hidden="true"></i></a>
-                <a target="_blank" href="https://www.instagram.com/chiangse/"><i class="fa fa-instagram" aria-hidden="true"></i></a></p>
+            <p>Coded and designed by <a style="color: #1e88cb" href="group9@gmail.com">Ids517Group9 </a>&copy;&nbsp;2021&ensp;|&ensp;
+                <a target="_blank" href="https://www.linkedin.com"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+                <a target="_blank" href="https://500px.com"><i class="fa fa-500px" aria-hidden="true"></i></a>
+                <a target="_blank" href="https://github.com"><i class="fa fa-github" aria-hidden="true"></i></a>
+                <a target="_blank" href="https://www.instagram.com"><i class="fa fa-instagram" aria-hidden="true"></i></a></p>
         </div>
     </div>
 </footer>
