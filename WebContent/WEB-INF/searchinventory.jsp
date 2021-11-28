@@ -82,24 +82,24 @@
 						<input type="text" name="Company" id = "Company" placeholder="Enter Company Name">
 						  <button type="submit" value="view product details" class="btn btn-primary">Search</button>
 					</form>
-					<h3> OR </h3>
+					
 					<form action="SearchInventoryDatabytype.do" method="GET">
 						<input type="text" name="Type" id = "Type" placeholder="Enter Body Type">
 						  <button type="submit" value="view product details" class="btn btn-primary">Search</button>
 					</form>
 					
-					<h3>OR</h3>
+					
 					<form action="SearchInventoryDatabyprice.do" method="GET">
 						<input type="text" name="Price" id = "Price" placeholder="Enter Maximum Price">
 						  <button type="submit" value="view product details" class="btn btn-primary">Search</button>
 					</form>
-					<h3>OR</h3>
+					
 					<form action="SearchInventoryDatabymodelname.do" method="GET">
 						<input type="text" name="Mname" id = "Mname" placeholder="Enter Model Name">
 						  <button type="submit" value="view product details" class="btn btn-primary">Search</button>
 					</form>
 					
-					<h3>OR</h3>
+					
 					<form action="SearchInventoryDatabyyear.do" method="GET">
 						<input type="text" name="Year" id = "Year" placeholder="Enter Model Year">
 						  <button type="submit" value="view product details" class="btn btn-primary">Search</button>
