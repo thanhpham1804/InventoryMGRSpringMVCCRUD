@@ -1,6 +1,5 @@
 package data;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public interface ProductDAO {
@@ -14,7 +13,5 @@ public interface ProductDAO {
 	public List<Product> getproductbytype(String btype);
 	public List<Product> getproductbymodelname(String Mname);
 	public List<Product> getproductbyyear(int year);
-	// getProductsByType
-	// getProductsByCarton
-	// getProductsByPallet
+
 }
