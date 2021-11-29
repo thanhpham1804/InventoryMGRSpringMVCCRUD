@@ -16,6 +16,8 @@ public interface ProductService {
 	public List<Product> getproductbymodelname(String Mname);
 	public List<Product> getproductbyyear(int year);
 	public String getPasswordByUser(String username);
+	public List<Product> getQuantityGroupByManufacturer();
+	public List<Product> getAssetsByWarehouse();
 
 
 }

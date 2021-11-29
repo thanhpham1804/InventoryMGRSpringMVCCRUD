@@ -2,6 +2,8 @@ package data;
 
 
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
 import java.sql.*;
 //This class is used for all the data manipulation codes
 public class Database {
@@ -205,6 +207,57 @@ public class Database {
 				throw new Error(e);
 			}
             return null;
+		}
+		
+		public List<Product> getQuantityGroupByManufacturer() {
+			
+			ArrayList<Product> list = new ArrayList<Product>();
+			ResultSet rs = DatabaseConnector.executeQuery("select manufacturer,"
+					+ " sum(StockQty) as 'quantity'"
+					+ " from products"
+					+ " group by manufacturer");
+
+			try {
+				while(rs.next()) {
+					Product  p = new Product();
+					p.manufacturer = rs.getString("manufacturer");
+					p.quantity = rs.getInt("quantity");
+					list.add(p);
+
+					
+				}
+			} catch (SQLException e) {
+				// TODO Auto-generated catch block
+				throw new Error(e);
+			}
+			return list;
+		}
+		
+		public List<Product> getAssetsByWarehouse() {
+			
+			ArrayList<Product> list = new ArrayList<Product>();
+			ResultSet rs = DatabaseConnector.executeQuery("select LocationCode ,"
+					+ " sum(StockQty) as 'quantity'"
+					+ " ,sum(unitcost * StockQty) as 'Total_Assets_cost'"
+					+ " ,sum(unitcost * MSRP) as 'Total_Assets_MSRP'"
+					+ " from products"
+					+ " group by LocationCode");
+
+			try {
+				while(rs.next()) {
+					Product  p = new Product();
+					p.location = getWarehouse(rs.getInt("LocationCode"));
+					p.quantity = rs.getInt("quantity");
+					p.unitcost = rs.getDouble("Total_Assets_cost");
+					p.msrp = rs.getDouble("Total_Assets_MSRP");
+					list.add(p);
+					
+				}
+			} catch (SQLException e) {
+
+				throw new Error(e);
+			}
+			return list;
 		}
         
 

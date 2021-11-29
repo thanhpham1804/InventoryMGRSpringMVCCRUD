@@ -88,5 +88,19 @@ public class ProductDAOImpl implements ProductDAO {
 	public String getPasswordByUser(String username) {
 		return db.getPasswordByUser(username);
 	}
+
+	@Override
+	public List<Product> getQuantityGroupByManufacturer() {
+		// TODO Auto-generated method stub
+		return db.getQuantityGroupByManufacturer();
+	}
+
+	@Override
+	public List<Product> getAssetsByWarehouse() {
+		// TODO Auto-generated method stub
+		return db.getAssetsByWarehouse();
+	}
+	
+	
  
 }

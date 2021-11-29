@@ -31,6 +31,8 @@
                                                         <!--<li><a class="bold" href="DeleteProduct.do">delete product</a></li>-->
 						</ul></li>
 					<li><a class="bold" href="SearchInventory.do">Search Inventory</a></li>
+					<li><a class="bold" href="Report.do">Report</a></li>
+					
 					<%} %>
 					<li><a class="bold" href="contact.jsp">contact</a></li>
 					<% 

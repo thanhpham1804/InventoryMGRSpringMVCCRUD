@@ -78,5 +78,20 @@ public class ProductServiceImpl implements ProductService {
 	public String getPasswordByUser(String username) {
 		return productDAO.getPasswordByUser(username);
 	}
+
+
+	@Override
+	public List<Product> getQuantityGroupByManufacturer() {
+		// TODO Auto-generated method stub
+		return productDAO.getQuantityGroupByManufacturer();
+	}
+
+
+	@Override
+	public List<Product> getAssetsByWarehouse() {
+		// TODO Auto-generated method stub
+		return productDAO.getAssetsByWarehouse();
+	}
+	
 	
 }

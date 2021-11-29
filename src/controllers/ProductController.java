@@ -166,7 +166,6 @@ public class ProductController {
 			Product p = productService.getProduct(ID);
 			mv.addObject("product", p);
 		}
-//		mv.addObject("inventory", productService.getInventory());
 		mv.addObject("inventory", productService.getInventory());
 		mv.setViewName("viewProduct");
 		return mv;
@@ -201,6 +200,16 @@ public class ProductController {
 	public ModelAndView logout(HttpServletRequest request) {
 		ModelAndView mv = new ModelAndView("redirect:/login.jsp");
 		request.getSession().setAttribute("username", null);
+	
+		return mv;
+	}
+	
+	@RequestMapping(path = "Report.do", method = RequestMethod.GET)
+	public ModelAndView report(HttpServletRequest request) {
+		ModelAndView mv = new ModelAndView();
+		mv.addObject("quantityByManufacturer", productService.getQuantityGroupByManufacturer());
+		mv.addObject("assetsByWarehouse", productService.getAssetsByWarehouse());
+		mv.setViewName("report");
 	
 		return mv;
 	}
