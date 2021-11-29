@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+    <%String username = (String)session.getAttribute("username"); %>
 		<!--Begin Navbar-->
 		<nav class="navbar navbar-default navbar-fixed-top">
 		<div class="container-fluid">
@@ -15,8 +16,9 @@
 			</div>
 			<div class="collapse navbar-collapse" id="myNavbar">
 				<ul class="nav navbar-nav navbar-right">
-					<li><a href="about.jsp">About Us</a>
+					<li><a href="aboutus.jsp">About Us</a>
 					</li>
+					<%if(username != null)  {%>
 					<li ><a class="bold" href="GetInventory.do">inventory
 							list</a></li>
 					<li class="dropdown"><a href="#" class="dropdown-toggle"
@@ -29,9 +31,9 @@
                                                         <!--<li><a class="bold" href="DeleteProduct.do">delete product</a></li>-->
 						</ul></li>
 					<li><a class="bold" href="SearchInventory.do">Search Inventory</a></li>
+					<%} %>
 					<li><a class="bold" href="contact.jsp">contact</a></li>
 					<% 
-					String username = (String)session.getAttribute("username");
 					if(username != null)
 					{
 						%>
