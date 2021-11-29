@@ -46,16 +46,12 @@
 		<h1 class="center">Inventory List</h1>
 		<div class="row">
 			<div class="col-md-12">
-				<div class="addButtonTop">
-					<form action="AddProduct.do" method="GET">
-						<button type="submit" name="ID" value="ID"
-							class="btn btn-md btn-success">add product</button>
-					</form>
-				</div>
+				
 			</div>
 		</div>
 
-		<div class="container" id="inventoryList">
+		<div class="container" id="inventoryList" style="position:relative;left:0px;">
+			
 			<table class="table-hover table-responsive">
 				<thead class="thead-inverse">
 					<tr>
@@ -71,6 +67,12 @@
 						<th>Discount</th>
 						<th>Quantity</th>
 						<th>Status</th>
+						&nbsp;
+						&nbsp;
+						&nbsp;
+						&nbsp;
+						
+						
 						<th colspan="3">Actions</th>
 					</tr>
 				</thead>
@@ -89,7 +91,6 @@
 							<td class="spacing">${item.discount}</td>
 							<td class="spacing">${item.quantity}</td>
 							<td class="spacing">${item.getStatus()}</td>
-							
 							<td class="viewButton"><form
 									action="ViewProduct.do?ID=${item.id}" method="GET">
 									<button type="submit" name="ID" value="${item.id}"

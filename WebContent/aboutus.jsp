@@ -64,7 +64,7 @@
         </div>
         <div class="unit">
           <img src="./images/het.png" alt="">
-          <p>Het Raval BharatKumar, Vice President </p>
+          <p>Het Raval, Vice President </p>
           <p>Full stack developer and Business Analyst </p>
 
         </div>

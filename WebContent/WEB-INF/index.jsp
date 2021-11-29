@@ -75,19 +75,18 @@
         </nav>
  		-->
  		<jsp:include page="header.jsp" />
+ 		<br>
+ 		<br>
+ 		<br>
+ 		<br>
  		
-        <div>  
-            <video width="320" height="240" autoplay>
-                <source src="https://www.youtube.com/watch?v=x7t_-ULoAZM" type="video/mp4">
-            Your browser does not support the video tag.
-            </video>
-        </div>
 
 
         <!--Begin Content-->
         <div class="container">
             <div class="row">
                 <span class="text1">Welcome to the Inventory Management System</span>
+                <br>
                 <span class="text2">Please select one of the options in the navigation bar at the top to begin</span>
             </div>
         </div>

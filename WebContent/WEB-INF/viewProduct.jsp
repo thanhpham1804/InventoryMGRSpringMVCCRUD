@@ -55,7 +55,7 @@
 								<option value="${item.id}">Product ID: ${item.id}</option>
 
 							</c:forEach>
-						</select> <br> <button type="submit" value="view product details" class="btn btn-primary">view</button>
+						</select> <button type="submit" value="view product details" class="btn btn-primary">view</button>
 
 					</form>
 

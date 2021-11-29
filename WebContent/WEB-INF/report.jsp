@@ -35,6 +35,10 @@
 		console.log("ready!");
 	});
 </script>
+<script
+src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js">
+</script>
+
 <title>AutoShop Inventory Management System- Group 9 </title>
 </head>
 <body>
@@ -43,7 +47,8 @@
 	
 
 		<!--Begin Content-->
-		<h1>Inventory Report</h1>
+		<br>
+		<h1><center>Inventory Report</center></h1>
 		<div class="container" id="inventoryList">
 		<h3>Quantity by Manufacturer</h3>
 		
@@ -100,6 +105,15 @@
 		<script
 			src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 	</div>
+	
+	
+	
+	
+	
+
+
+	
+	
 
 </body>
 
