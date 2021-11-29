@@ -184,11 +184,10 @@ public class ProductController {
 	public ModelAndView login(@RequestParam("Uname") String username, @RequestParam("Pass") String password
 			, HttpServletRequest request) {
 		ModelAndView mv = new ModelAndView();
-		String passwordDB = "apples";//= productService.getPasswordByUser(username);
+		String passwordDB = productService.getPasswordByUser(username);
 		request.getSession().setAttribute("username", username);
 		
-		
-		if(passwordDB.equals(password)) {
+		if(passwordDB != null && passwordDB.equals(password)) {
 			mv.setViewName("index");
 		} else {
 			mv = new ModelAndView("redirect:/login.jsp");
