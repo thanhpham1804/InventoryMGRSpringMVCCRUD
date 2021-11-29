@@ -13,9 +13,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css?family=Raleway:500,900|Quicksand" rel="stylesheet">
 
-    <link rel="stylesheet" href="styles/contactStyles.css">
-    <link rel="stylesheet" href="styles/index.css" type="text/css"/>
-
+    <link rel="stylesheet" href="styles/main.css"/>
 
     <!-- jQuery -->
     <script type="text/javascript" src="http://code.jquery.com/jquery-1.10.0.min.js"></script>
@@ -31,30 +29,8 @@
 <body>
     <div >   
     <!--Begin Navbar-->
-        <nav class="navbar navbar-default navbar-fixed-top">
-            <div class="container-fluid">
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-                    <h4>
-                    <a href="index.html"><img src="icon.jpg" style="width:130px;height:50px;"></a>  
-                </h4>
-                </div>
-                <div class="collapse navbar-collapse" id="myNavbar">
-                    <ul class="nav navbar-nav navbar-right">
-                            <li><a class="bold" href="index.html">Home</a></li>
-                            <li><a class="bold" href="About us.html">About us</a></li>
-                            <li><a class="bold" href="contact.html">Contact</a></li>
-                            <li><a class="bold" href="startpage.html">Login </a></li>
-                            <input type="text" placeholder="Search" style="width: 120px; height: 50px;">
-                            
-                    </ul>
-                </div>
-                </div>
-           </nav>
+ 		<jsp:include page="WEB-INF/header.jsp" />
+
     
     <div class="container">
         <div class="containerContact">
@@ -96,15 +72,6 @@
     </body>
 
 <!-- Footer -->
-<footer>
-    <div class="footer">
-        <div class="container-fluid ">
-            <p>Coded and designed by <a style="color: #1e88cb" href="group9@gmail.com">IdsGroup9 </a>&copy;&nbsp;2021&ensp;|&ensp;
-                <a target="_blank" href="https://www.linkedin.com"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
-                <a target="_blank" href="https://500px.com"><i class="fa fa-500px" aria-hidden="true"></i></a>
-                <a target="_blank" href="https://github.com"><i class="fa fa-github" aria-hidden="true"></i></a>
-                <a target="_blank" href="https://www.instagram.com"><i class="fa fa-instagram" aria-hidden="true"></i></a></p>
-        </div>
-    </div>
-</footer>
+ <jsp:include page="WEB-INF/footer.jsp" />
+
 </html>

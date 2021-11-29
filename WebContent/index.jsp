@@ -110,7 +110,7 @@
 
 </body>
 
- 		<jsp:include page="WEB-INF/footer.jsp" />
+ <jsp:include page="WEB-INF/footer.jsp" />
 
 
 

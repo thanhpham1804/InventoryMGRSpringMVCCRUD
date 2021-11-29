@@ -22,7 +22,6 @@
 	href="https://fonts.googleapis.com/css?family=Raleway:500,900|Quicksand"
 	rel="stylesheet">
 <link rel="stylesheet" href="styles/main.css">
-<link rel="stylesheet" href="styles/viewInventoryStyles.css">
 
 <!-- jQuery -->
 <script type="text/javascript"
@@ -40,37 +39,8 @@
 	<div class="index-main">
 
 
-		<!--Begin Navbar-->
-		<nav class="navbar navbar-default navbar-fixed-top">
-		<div class="container-fluid">
-			<div class="navbar-header">
-				<button type="button" class="navbar-toggle" data-toggle="collapse"
-					data-target="#myNavbar">
-					<span class="icon-bar"></span> <span class="icon-bar"></span> <span
-						class="icon-bar"></span>
-				</button>
-				<h4>
-					<a href="index.html">Inventory Management SpringMVC</a>
-				</h4>
-			</div>
-			<div class="collapse navbar-collapse" id="myNavbar">
-				<ul class="nav navbar-nav navbar-right">
-					<li><a class="bold" href="GetInventory.do">inventory list</a></li>
-					<li class="dropdown"><a href="#" class="dropdown-toggle"
-						data-toggle="dropdown" role="button" aria-haspopup="true"
-						aria-expanded="false">View/Edit <span class="caret"></span></a>
-						<ul class="dropdown-menu">
-							<li class="active"><a class="bold" href="ViewProduct.do">view
-									product</a></li>
-							<li><a class="bold" href="AddProduct.do">add product</a></li>
-							<li><a class="bold" href="EditProduct.do">edit product</a></li>
-						</ul></li>
-					<li><a class="bold" href="DeleteProduct.do">delete product</a></li>
-					<li><a class="bold" href="contact.html">contact</a></li>
-				</ul>
-			</div>
-		</div>
-		</nav>
+		<jsp:include page="header.jsp" />
+
 
 		<!--Begin Content-->
 		<div class="container" id="inventoryList">
@@ -125,24 +95,8 @@
 </body>
 
 <!-- Footer -->
-<footer>
-<div class="footer">
-	<div class="container-fluid ">
-		<p>
-			Coded and designed by <a style="color: #1e88cb"
-				href="mailto:stephen.e.chiang@gmail.com">Stephen Chiang </a>&copy;&nbsp;2016&ensp;|&ensp;
-			<a target="_blank" href="https://www.linkedin.com/in/chiangs"><i
-				class="fa fa-linkedin" aria-hidden="true"></i></a> <a target="_blank"
-				href="https://500px.com/chiangs"><i class="fa fa-500px"
-				aria-hidden="true"></i></a> <a target="_blank"
-				href="https://github.com/chiangs"><i class="fa fa-github"
-				aria-hidden="true"></i></a> <a target="_blank"
-				href="https://www.instagram.com/chiangse/"><i
-				class="fa fa-instagram" aria-hidden="true"></i></a>
-		</p>
-	</div>
-</div>
-</footer>
+<jsp:include page="footer.jsp" />
+
 
 </body>
 

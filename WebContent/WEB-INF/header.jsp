@@ -15,7 +15,9 @@
 			</div>
 			<div class="collapse navbar-collapse" id="myNavbar">
 				<ul class="nav navbar-nav navbar-right">
-					<li class="active"><a class="bold" href="GetInventory.do">inventory
+					<li><a href="about.jsp">About Us</a>
+					</li>
+					<li ><a class="bold" href="GetInventory.do">inventory
 							list</a></li>
 					<li class="dropdown"><a href="#" class="dropdown-toggle"
 						data-toggle="dropdown" role="button" aria-haspopup="true"
