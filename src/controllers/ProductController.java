@@ -187,6 +187,7 @@ public class ProductController {
 		String passwordDB = productService.getPasswordByUser(username);
 		request.getSession().setAttribute("username", username);
 		
+		/* default is group9/group9 */
 		if(passwordDB != null && passwordDB.equals(password)) {
 			mv.setViewName("index");
 		} else {
