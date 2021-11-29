@@ -1,7 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
-
+<%@ taglib prefix = "fmt" uri = "http://java.sun.com/jsp/jstl/fmt" %>
+<fmt:setLocale value = "en_US"/>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -84,8 +85,8 @@
 						<td class="spacing">${product.year}</td>
 						<td class="spacing">${product.body}</td>
 						<td class="spacing">${product.location}</td>
-						<td class="spacing">${product.msrp}</td>
-						<td class="spacing">${product.unitcost}</td>
+						<td class="spacing"><fmt:formatNumber value = "${product.msrp}" type = "currency"/></td>
+						<td class="spacing"><fmt:formatNumber value = "${product.unitcost}" type = "currency"/></td>
 						<td class="spacing">${product.discount}</td>
 						<td class="spacing">${product.quantity}</td>
 						<td class="spacing">${product.getStatus()}</td>
