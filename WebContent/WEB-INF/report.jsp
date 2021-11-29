@@ -95,7 +95,17 @@ src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js">
 			</table>
 		</div>
 	
-
+                <script type='text/javascript' src='https://prod-useast-b.online.tableau.com/javascripts/api/viz_v1.js'></script>
+                <div class='tableauPlaceholder' style='width: 1000px; height: 827px;'>
+                    <object class='tableauViz' width='1000' height='827' style='display:none;'>
+                        <param name='host_url' value='https%3A%2F%2Fprod-useast-b.online.tableau.com%2F' /> 
+                        <param name='embed_code_version' value='3' /> 
+                        <param name='site_root' value='&#47;t&#47;sameerviz' />
+                        <param name='name' value='Eadprohdashboard&#47;Dashboard1' />
+                        <param name='tabs' value='no' /><param name='toolbar' value='yes' />
+                        <param name='showAppBanner' value='false' />
+                    </object>
+                </div>
 
 
 		<!-- /container -->
