@@ -92,13 +92,7 @@ h4 a {
     font-weight: 900;
 }
 
-#myNavbar p {
-    color: #eeeeee;
-    text-transform: uppercase;
-    margin: 0 0 0 8px;
-    text-align: center;
-    font-weight: 900;
-}
+
 
 
 .navbar h4 {
@@ -293,5 +287,34 @@ table td {
 
 #social-list {
     margin: 0;
+}
+
+
+
+
+.user p {
+	padding-top: 10px;
+	padding-right: 5px;
+}
+
+.user img {
+	width: 15px
+}
+
+#myNavbar .user a {
+	text-align: right;
+	font-weight: 2000;
+	font-size: 12px;
+	padding-right:5px
+	
+}
+
+#myNavbar p {
+    color: #eeeeee;
+    text-transform: uppercase;
+    margin: 0 0 0 8px;
+    text-align: center;
+    font-weight: 900;
+    font-size: 12px;
 }
 

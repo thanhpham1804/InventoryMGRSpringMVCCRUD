@@ -39,7 +39,10 @@
 					if(username != null)
 					{
 						%>
-							<li><p style="padding-top: 0px;"><%=username%></p><a href="Logout.do">Logout</a></li>
+							<li class="user">
+							<p><img src="user.png"></img> <%=username%></p>
+							<a style="padding-top: 0px;" href="Logout.do">Logout</a>
+							</li>
 						 <%
 					}
 					
