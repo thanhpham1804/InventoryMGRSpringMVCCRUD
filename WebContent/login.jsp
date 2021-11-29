@@ -13,7 +13,7 @@
  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
  <link href="https://fonts.googleapis.com/css?family=Raleway:500,900|Quicksand" rel="stylesheet">
- <link rel="stylesheet" href="styles/main.css">
+ <link rel="stylesheet" href="styles/startpage.css">
  <title>Group 9 Inventory Management System</title>
 
 <body>
