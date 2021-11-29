@@ -29,13 +29,7 @@ public class ProductController {
 
 	@Autowired
 	private ProductService productService;
-	//private ProductDAO mockDAO;
 
-	/*
-	public void setDao(ProductDAO dao) {
-		this.mockDAO = dao;
-	}*/
-	
 	
 	@RequestMapping(path = "GetInventory.do", method = RequestMethod.GET)
 	public ModelAndView getInventory() {
