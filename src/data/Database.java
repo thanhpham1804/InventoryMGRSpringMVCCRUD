@@ -193,6 +193,19 @@ public class Database {
             DatabaseConnector.executeQuery(sql);
 
         }
+
+
+		public String getPasswordByUser(String username) {
+			ResultSet rs = DatabaseConnector.executeQuery("SELECT Password FROM USER WHERE username = '" + username +"'");
+            try {
+				while(rs.next()) {
+					return rs.getString(0);
+				}
+			} catch (SQLException e) {
+				throw new Error(e);
+			}
+            return null;
+		}
         
 
 	

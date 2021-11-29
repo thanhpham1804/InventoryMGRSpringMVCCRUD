@@ -22,23 +22,6 @@
  		<jsp:include page="WEB-INF/header.jsp" />
 
 
-	<script>
-	function login()
-	{
-		var un=document.forms["myForm"]["Uname"].value;
-		var pw=document.forms["myForm"]["Pass"].value;
-		
-		if(un=="name" && pw=="pass")
-		{
-			window.location.href="index.html";
-		}
-
-		else
-		{
-			alert("Invalid username/password");
-		}
-	}
-	</script>
 
 	<!-- <div class="center"> -->
 	<div style="padding-top: 90px; padding-right: 30px; padding-bottom: 50px; padding-left: 80px;">
@@ -54,7 +37,7 @@
 		Please use your username & password to login
 		</h1> -->
 
-	<form name="myForm" method="post">
+	<form name="myForm" method="post" action="Login.do">
 
 		<label style="font-size:15px;color:black;font-family:'Times New Roman', Times, serif;">
 		<b>Username</b>
@@ -72,7 +55,7 @@
 
 		<br><br>
 
-		<input type="button" name="log" id="logButton" value="Login" onclick="login()" style="background-color: #7fabec;">
+		<input type="submit" name="log" id="logButton" value="Login" style="background-color: #7fabec;">
 	</form>
 
 </div>

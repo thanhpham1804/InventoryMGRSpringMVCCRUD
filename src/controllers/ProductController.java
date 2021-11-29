@@ -1,8 +1,10 @@
 package controllers;
 
+import javax.servlet.http.HttpServletRequest;
 import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Controller;
 import org.springframework.validation.Errors;
 import org.springframework.web.bind.annotation.ModelAttribute;
@@ -175,6 +177,31 @@ public class ProductController {
 		ModelAndView mv = new ModelAndView();
 		mv.addObject("product", productService.getProduct(Integer.parseInt(id)));
 		mv.setViewName("viewProduct");
+		return mv;
+	}
+	
+	@RequestMapping(path = "Login.do", method = RequestMethod.POST)
+	public ModelAndView login(@RequestParam("Uname") String username, @RequestParam("Pass") String password
+			, HttpServletRequest request) {
+		ModelAndView mv = new ModelAndView();
+		String passwordDB = "apples";//= productService.getPasswordByUser(username);
+		request.getSession().setAttribute("username", username);
+		
+		
+		if(passwordDB.equals(password)) {
+			mv.setViewName("index");
+		} else {
+			mv = new ModelAndView("redirect:/login.jsp");
+		}
+	
+		return mv;
+	}
+	
+	@RequestMapping(path = "Logout.do", method = RequestMethod.GET)
+	public ModelAndView logout(HttpServletRequest request) {
+		ModelAndView mv = new ModelAndView("redirect:/login.jsp");
+		request.getSession().setAttribute("username", null);
+	
 		return mv;
 	}
 

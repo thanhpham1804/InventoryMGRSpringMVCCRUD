@@ -84,5 +84,9 @@ public class ProductDAOImpl implements ProductDAO {
 		// TODO Auto-generated method stub
 		return db.listbyyear(year);
 	}
-
+	
+	public String getPasswordByUser(String username) {
+		return db.getPasswordByUser(username);
+	}
+ 
 }

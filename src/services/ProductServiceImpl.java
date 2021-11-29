@@ -74,4 +74,9 @@ public class ProductServiceImpl implements ProductService {
 		// TODO Auto-generated method stub
 		return productDAO.getproductbyyear(year);
 	}
+	
+	public String getPasswordByUser(String username) {
+		return productDAO.getPasswordByUser(username);
+	}
+	
 }

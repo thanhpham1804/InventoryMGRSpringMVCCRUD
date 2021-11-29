@@ -30,6 +30,16 @@
 						</ul></li>
 					<li><a class="bold" href="SearchInventory.do">Search Inventory</a></li>
 					<li><a class="bold" href="contact.jsp">contact</a></li>
+					<% 
+					String username = (String)session.getAttribute("username");
+					if(username != null)
+					{
+						%>
+							<li><p style="padding-top: 0px;"><%=username%></p><a href="Logout.do">Logout</a></li>
+						 <%
+					}
+					
+					%>
 				</ul>
 			</div>
 		</div>

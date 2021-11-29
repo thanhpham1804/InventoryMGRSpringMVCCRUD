@@ -92,6 +92,15 @@ h4 a {
     font-weight: 900;
 }
 
+#myNavbar p {
+    color: #eeeeee;
+    text-transform: uppercase;
+    margin: 0 0 0 8px;
+    text-align: center;
+    font-weight: 900;
+}
+
+
 .navbar h4 {
     color: #fff;
     font-weight: 900;
