@@ -30,7 +30,6 @@ public class ProductController {
 	@Autowired
 	private ProductService productService;
 
-	
 	@RequestMapping(path = "GetInventory.do", method = RequestMethod.GET)
 	public ModelAndView getInventory() {
 		ModelAndView mv = new ModelAndView();
@@ -178,23 +177,20 @@ public class ProductController {
 			, HttpServletRequest request) {
 		ModelAndView mv = new ModelAndView();
 		String passwordDB = productService.getPasswordByUser(username);
-		request.getSession().setAttribute("username", username);
 		
 		/* default is group9/group9 */
 		if(passwordDB != null && passwordDB.equals(password)) {
+			request.getSession().setAttribute("username", username);
 			mv.setViewName("index");
 		} else {
 			mv = new ModelAndView("redirect:/login.jsp");
 		}
-	
 		return mv;
 	}
-	
 	@RequestMapping(path = "Logout.do", method = RequestMethod.GET)
 	public ModelAndView logout(HttpServletRequest request) {
 		ModelAndView mv = new ModelAndView("redirect:/login.jsp");
 		request.getSession().setAttribute("username", null);
-	
 		return mv;
 	}
 	
